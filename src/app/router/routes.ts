@@ -1,11 +1,11 @@
-import { Home } from '../../pages/Home';
-import { Preferences } from '../../pages/Preferences';
-import { Welcome } from '../../pages/Welcome';
+import { Chats } from '../../pages/ChatsPage';
+import { Preferences } from '../../pages/PreferencesPage';
+import { Welcome } from '../../pages/WelcomePage';
 
 export const routes = [
   {
-    path: '/',
-    Component: Home,
+    path: '/chats',
+    Component: Chats,
     handle: { headerText: 'Чаты' },
   },
   {

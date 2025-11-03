@@ -1,20 +1,14 @@
-import { Outlet, useMatches } from 'react-router';
-
-interface RouteHandle {
-  headerText?: string;
-}
+import { Outlet } from 'react-router';
+import { Footer } from '../../shared/ui/Footer';
+import { Header } from '../../shared/ui/Header';
+import s from './Layout.module.scss';
 
 export const Layout = () => {
-  const matches = useMatches();
-  const currentMatch = matches[matches.length - 1];
-  const headerText =
-    (currentMatch.handle as RouteHandle)?.headerText || 'я шапка';
-
   return (
-    <div>
-      <header>{headerText}</header>
+    <div className={s.layout}>
+      <Header />
       <Outlet />
-      <footer>я подвал</footer>
+      <Footer />
     </div>
   );
 };
