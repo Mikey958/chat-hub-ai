@@ -37,4 +37,41 @@
     text-align: center;
     letter-spacing: 0;
   }
+
+  &__logic {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__politics {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 5px;
+  }
+
+  &__rule {
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    font-style: regular;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #00000080;
+    letter-spacing: 0%;
+  }
+
+  &__link {
+    color: #3498db;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

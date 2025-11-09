@@ -1,7 +1,13 @@
+import { useState } from 'react';
+import { Link } from 'react-router';
 import { Logo } from '@ui/Logo';
+import { CheckBox } from '../../ui/CheckBox';
+import { Button } from './components/Button';
 import s from './Welcome.module.scss';
 
 export const Welcome = () => {
+  const [checked, setChecked] = useState(false);
+
   return (
     <main className={s.welcomePage}>
       <section className={s.welcomePage__info}>
@@ -16,8 +22,16 @@ export const Welcome = () => {
         </p>
       </section>
       <section className={s.welcomePage__logic}>
-        <p>TODO: чек бокс + условия</p>
-        <p>TODO: кнопка далее</p>
+        <div className={s.welcomePage__politics}>
+          <CheckBox checked={checked} onChange={setChecked} />
+          <p className={s.welcomePage__rule}>
+            Согласен с{' '}
+            <Link className={s.welcomePage__link} to='#'>
+              условиями использования <br /> приложения
+            </Link>
+          </p>
+        </div>
+        <Button disabled={!checked} />
       </section>
     </main>
   );
