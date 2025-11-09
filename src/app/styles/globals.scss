@@ -1,17 +1,17 @@
-@import './reset.scss';
+@import './reset';
 @import './fonts.css';
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 :root {
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 body {

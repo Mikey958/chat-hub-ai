@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
-import { Footer } from '../../shared/ui/Footer';
-import { Header } from '../../shared/ui/Header';
+import { Footer } from '../../components/Footer';
+import { Header } from '../../components/Header';
 import s from './Layout.module.scss';
 
 export const Layout = () => {

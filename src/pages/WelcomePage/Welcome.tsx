@@ -1,4 +1,4 @@
-import { Logo } from '../../shared/ui/Logo';
+import { Logo } from '../../ui/Logo';
 import s from './Welcome.module.scss';
 
 export const Welcome = () => {

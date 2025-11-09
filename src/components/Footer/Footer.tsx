@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { NavLink } from 'react-router';
-import ChatIcon from '../../../shared/assets/icons/chats-icon.svg?react';
-import PreferencesIcon from '../../../shared/assets/icons/preferences-icon.svg?react';
+import ChatIcon from '@assets/icons/chats-icon.svg?react';
+import PreferencesIcon from '@assets/icons/preferences-icon.svg?react';
 import s from './Footer.module.scss';
 
 export const Footer = () => {
