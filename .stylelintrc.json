@@ -13,6 +13,9 @@
     "scss/dollar-variable-pattern": null,
     "scss/percent-placeholder-pattern": null,
     "no-descending-specificity": null,
+    "import-notation": null,
+    "function-url-quotes": "always",
+    "scss/load-partial-extension": null,
     "selector-pseudo-class-no-unknown": [
       true,
       {

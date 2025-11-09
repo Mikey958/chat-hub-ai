@@ -1,4 +1,4 @@
-import chatsImage from '../../assets/icons/chats-detail-icon.svg';
+import chatsImage from '@assets/icons/chats-detail-icon.svg';
 import s from './Logo.module.scss';
 
 export const Logo = () => {

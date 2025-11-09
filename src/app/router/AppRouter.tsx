@@ -1,5 +1,5 @@
 import { createBrowserRouter, Navigate } from 'react-router';
-import { Layout } from '../layouts/Layout';
+import { Layout } from '@app/layouts/Layout';
 import { routes, routesWithoutLayout } from './routes';
 
 const AppRouter = createBrowserRouter([
