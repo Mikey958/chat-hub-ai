@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# Chat Hub AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Мини-приложение для управления мессенджерами.
 
-Currently, two official plugins are available:
+## Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - UI библиотека
+- **TypeScript 5.9** - типизация
+- **Vite 7** - сборщик и dev-сервер
+- **React Router 7** - маршрутизация
+- **SCSS Modules** - стилизация
 
-## React Compiler
+## Инструменты разработки
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **ESLint** - статический анализ кода
+- **Prettier** - форматирование кода
+- **Stylelint** - проверка стилей
+- **SWC** - быстрая компиляция
 
-## Expanding the ESLint configuration
+## Установка и запуск
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Установка зависимостей
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Запуск dev-сервера
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Сборка проекта
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Предпросмотр production сборки
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Доступные команды
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Проверка кода
+npm run lint
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Автоисправление
+npm run format
+
+# Отдельные проверки
+npm run lint:eslint      # ESLint
+npm run lint:stylelint   # Stylelint
+npm run lint:prettier    # Prettier
+
+# Отдельные автоисправления
+npm run format:eslint    # ESLint --fix
+npm run format:stylelint # Stylelint --fix
+npm run format:prettier  # Prettier --write
 ```
+
+## Структура проекта
+
+```
+src/
+├── app/              # Конфигурация приложения
+│   ├── layouts/      # Layout компоненты
+│   ├── router/       # Настройка роутинга
+│   └── styles/       # Глобальные стили
+├── assets/           # Статические ресурсы
+│   ├── fonts/        # Шрифты
+│   └── icons/        # Иконки и SVG
+├── components/       # Общие компоненты
+│   ├── Header/       # Шапка
+│   └── Footer/       # Футер с навигацией
+├── pages/            # Страницы приложения
+│   ├── WelcomePage/  # Приветственная страница
+│   ├── ChatsPage/    # Страница чатов
+│   └── PreferencesPage/ # Настройки
+├── ui/               # UI компоненты
+│   ├── Logo/         # Логотип
+│   └── CheckBox/     # Кастомный чекбокс
+└── modules/          # Бизнес-логика (пусто)
+```
+
+## Особенности
+
+- CSS Modules для изоляции стилей
+- SVG как React компоненты (через SVGR)
+- Проверка доступности (a11y)
+- Строгая типизация TypeScript
+
+## Страницы
+
+- `/welcome` - Приветственный экран с согласием на условия
+- `/chats` - Список чатов (в разработке)
+- `/preferences` - Настройки приложения (в разработке)
+
+## Настройка VS Code
+
+Проект включает рекомендуемые настройки и расширения для VS Code:
+
+- Prettier - форматирование кода
+- ESLint - проверка JavaScript/TypeScript
+- Stylelint - проверка стилей
+
+Настройки применяются автоматически при открытии проекта.
+

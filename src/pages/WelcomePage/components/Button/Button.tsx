@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router';
 import s from './Button.module.scss';
 
 interface ButtonProps {
@@ -5,8 +6,16 @@ interface ButtonProps {
 }
 
 export const Button = ({ disabled = true }: ButtonProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!disabled) {
+      navigate('/chats');
+    }
+  };
+
   return (
-    <button disabled={disabled} className={s.button}>
+    <button onClick={handleClick} disabled={disabled} className={s.button}>
       Далее
     </button>
   );
