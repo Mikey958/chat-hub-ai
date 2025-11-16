@@ -1,9 +1,9 @@
-.chatsPage {
+.list {
   display: flex;
-  flex: 1;
   flex-direction: column;
+  gap: 2px;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  background-color: #fff;
+  padding-top: 10px;
 }
