@@ -1,15 +1,20 @@
-import { Chats } from '../../pages/ChatsPage';
-import { Preferences } from '../../pages/PreferencesPage';
-import { Welcome } from '../../pages/WelcomePage';
+import {
+  CHATS_ROUTE,
+  PREFERENCES_ROUTE,
+  WELCOME_ROUTE,
+} from '@app/router/constants.ts';
+import { Chats } from '@pages/ChatsPage';
+import { Preferences } from '@pages/PreferencesPage';
+import { Welcome } from '@pages/WelcomePage';
 
 export const routes = [
   {
-    path: '/chats',
+    path: CHATS_ROUTE,
     Component: Chats,
     handle: { headerText: 'Чаты' },
   },
   {
-    path: '/preferences',
+    path: PREFERENCES_ROUTE,
     Component: Preferences,
     handle: { headerText: 'Настройки' },
   },
@@ -17,7 +22,7 @@ export const routes = [
 
 export const routesWithoutLayout = [
   {
-    path: '/welcome',
+    path: WELCOME_ROUTE,
     Component: Welcome,
   },
 ];

@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router';
+import { PREFERENCES_ROUTE } from '@app/router/constants.ts';
 import cross from '@assets/icons/cross-icon.svg';
 import warn from '@assets/icons/warn-icon.svg';
 import s from './ErrorAuth.module.scss';
@@ -39,7 +40,7 @@ export const ErrorAuth = ({ handleClose }: ErrorAuthProps) => {
           Позже
         </button>
         <Link
-          to='/preferences'
+          to={PREFERENCES_ROUTE}
           className={clsx(
             s.errorContainer__button,
             s.errorContainer__button_type_link,

@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { NavLink } from 'react-router';
+import { CHATS_ROUTE, PREFERENCES_ROUTE } from '@app/router/constants.ts';
 import ChatIcon from '@assets/icons/chats-icon.svg?react';
 import PreferencesIcon from '@assets/icons/preferences-icon.svg?react';
 import s from './Footer.module.scss';
@@ -9,7 +10,7 @@ export const Footer = () => {
     <footer className={s.footer}>
       <nav className={s.footer__nav}>
         <NavLink
-          to='/chats'
+          to={CHATS_ROUTE}
           className={({ isActive }) =>
             clsx(s.footer__link, isActive && s.footer__link_active)
           }
@@ -18,7 +19,7 @@ export const Footer = () => {
           <p className={s.footer__text}>Чаты</p>
         </NavLink>
         <NavLink
-          to='/preferences'
+          to={PREFERENCES_ROUTE}
           className={({ isActive }) =>
             clsx(s.footer__link, isActive && s.footer__link_active)
           }

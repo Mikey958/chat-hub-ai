@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router';
+import { CHATS_ROUTE } from '@app/router/constants.ts';
 import s from './Button.module.scss';
 
 interface ButtonProps {
@@ -10,7 +11,7 @@ export const Button = ({ disabled = true }: ButtonProps) => {
 
   const handleClick = () => {
     if (!disabled) {
-      navigate('/chats');
+      navigate(CHATS_ROUTE);
     }
   };
 
