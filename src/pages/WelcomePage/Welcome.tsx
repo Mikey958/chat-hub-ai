@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
+import { CheckBox } from '@ui/CheckBox';
 import { Logo } from '@ui/Logo';
-import { CheckBox } from '../../ui/CheckBox';
 import { Button } from './components/Button';
 import s from './Welcome.module.scss';
 

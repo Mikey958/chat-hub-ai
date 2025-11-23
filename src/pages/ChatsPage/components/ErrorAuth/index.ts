@@ -1,0 +1,1 @@
+export { ErrorAuth } from './ErrorAuth';
