@@ -1,0 +1,18 @@
+.connectedMessengers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+
+  &__title {
+    align-self: flex-start;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    color: #000;
+    letter-spacing: 0;
+  }
+}
