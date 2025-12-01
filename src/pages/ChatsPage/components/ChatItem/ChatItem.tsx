@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+import { CHAT_ROUTE } from '@app/router/constants.ts';
 import { formatChatTime } from '@pages/ChatsPage/helpers/formatChatTime.ts';
 import { formatUnreadCount } from '@pages/ChatsPage/helpers/formatUnreadCount.ts';
 import s from './ChatItem.module.scss';
@@ -17,7 +19,7 @@ interface ChatItemProps {
 
 export const ChatItem = ({ chat }: ChatItemProps) => {
   return (
-    <article className={s.card}>
+    <Link to={CHAT_ROUTE + '/' + chat.id} className={s.card}>
       <img className={s.card__avatar} src={chat.avatar} alt={chat.fullname} />
       <div className={s.card__content}>
         <p className={s.card__fullname}>{chat.fullname}</p>
@@ -31,6 +33,6 @@ export const ChatItem = ({ chat }: ChatItemProps) => {
           </p>
         )}
       </div>
-    </article>
+    </Link>
   );
 };

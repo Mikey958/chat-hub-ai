@@ -1,0 +1,183 @@
+.chatPage {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 59px;
+    padding: 0 10px;
+    background-color: #fff;
+    border-bottom: 0.5px solid #D9D9D9;
+    box-shadow: 0 4px 4px 0 #0000000D
+  }
+
+  &__avatarWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F9F9F9;
+    border-radius: 50%;
+  }
+
+  &__avatar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #000;
+    letter-spacing: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 59px - 59px - 74px);
+    padding: 0 15px 10px;
+    background-image: url("@assets/images/background-chat.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__chat {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 8px 0;
+    overflow-y: auto;
+    background: transparent;
+  }
+
+  &__message {
+    position: relative;
+    max-width: 227px;
+    padding: 10px 35px 10px 15px;
+    font-family: Roboto, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.188;
+    color: #000;
+    letter-spacing: 0;
+    background-color: #FFF;
+    border-radius: 15px;
+    
+
+    &_me {
+      align-self: flex-end;
+      background-color: #DEDEDE;
+      border-bottom-right-radius: 5px;
+    }
+
+    &_other {
+      align-self: flex-start;
+      border-bottom-left-radius: 5px;
+    }
+  }
+
+  &__messageText {
+    font-family: Roboto, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.18;
+    color: #000;
+    letter-spacing: 0;
+    overflow-wrap: break-word;
+  }
+
+  &__messageTime {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-family: Roboto, sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 1.125;
+    color: #00000080;
+    letter-spacing: 0;
+  }
+
+  &__form {
+    width: 100%;
+    min-height: 30px;
+    max-height: 57px;
+    background: transparent;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 30px;
+    max-height: 57px;
+    padding: 2px 5px 2px 20px;
+    background-color: #FFF;
+    border: 1px solid #000;
+    border-radius: 10px;
+  }
+
+  &__textarea {
+    width: 229px;
+    height: 14px;
+    min-height: 14px;
+    max-height: 47px;
+    overflow-y: auto;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    color: #000;
+    letter-spacing: 0;
+    resize: vertical;
+    outline: none;
+    border: none;
+
+    &::placeholder {
+      font-family: Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.17;
+      color: #00000080;
+      letter-spacing: 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    outline: none;
+    background-color: #000;
+    border: none;
+    border-radius: 50%;
+  }
+}
