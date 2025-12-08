@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
-import { useParams } from 'react-router';
 import sendIcon from '@assets/icons/send-msg-icon.svg';
 import { formatTime } from '@pages/ChatPage/helpers/formatTime.ts';
 import s from './ChatPage.module.scss';
@@ -30,7 +29,6 @@ export const ChatPage = () => {
   ]);
   const [text, setText] = useState('');
   const listRef = useRef<HTMLDivElement | null>(null);
-
   useEffect(() => {
     const el = listRef.current;
     if (!el) return;
@@ -83,7 +81,7 @@ export const ChatPage = () => {
             alt='Автарка собеседника'
           />
         </div>
-        <h1 className={s.chatPage__title}>Имя Фамилия</h1>
+        <h1 className={s.chatPage__title}>Наталья Иванова</h1>
       </div>
       <div className={s.chatPage__container}>
         <section

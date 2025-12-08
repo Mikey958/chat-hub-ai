@@ -1,11 +1,13 @@
 import {
   CHAT_ROUTE,
   CHATS_ROUTE,
+  CONNECT_PREMIUM_ROUTE,
   PREFERENCES_ROUTE,
   WELCOME_ROUTE,
 } from '@app/router/constants.ts';
 import { ChatPage } from '@pages/ChatPage';
 import { Chats } from '@pages/ChatsPage';
+import { ConnectPremiumPage } from '@pages/ConnectPremiumPage';
 import { Preferences } from '@pages/PreferencesPage';
 import { Welcome } from '@pages/WelcomePage';
 
@@ -31,5 +33,9 @@ export const routesWithoutLayout = [
   {
     path: WELCOME_ROUTE,
     Component: Welcome,
+  },
+  {
+    path: CONNECT_PREMIUM_ROUTE,
+    Component: ConnectPremiumPage,
   },
 ];

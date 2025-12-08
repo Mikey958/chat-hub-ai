@@ -1,0 +1,1 @@
+export { ConnectPremiumPage } from './ConnectPremiumPage';
