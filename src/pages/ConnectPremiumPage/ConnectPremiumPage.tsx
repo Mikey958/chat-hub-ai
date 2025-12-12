@@ -145,7 +145,10 @@ export const ConnectPremiumPage = () => {
         </div>
       </div>
       <div className={s.connectPremiumPage__footer}>
-        <Link to={'#'} className={s.connectPremiumPage__subscribe}>
+        <Link
+          to={'https://www.tbank.ru/cf/8GB8wTqvqSj'}
+          className={s.connectPremiumPage__subscribe}
+        >
           <img src={whiteCrown} alt='Белая корона' />
           <span className={s.connectPremiumPage__subscribeText}>
             Оформить подписку
