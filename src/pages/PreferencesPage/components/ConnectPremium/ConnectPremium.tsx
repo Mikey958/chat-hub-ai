@@ -14,9 +14,9 @@ export const ConnectPremium = () => {
         <h2 className={s.premium__title}>Получить Premium</h2>
         <p className={s.premium__text}>Подключайте больше аккаунтов</p>
       </div>
-      <Link className={s.premium__link} to='#'>
+      <div className={s.premium__link}>
         <img src={arrowIcon} alt='arrow icon' />
-      </Link>
+      </div>
     </Link>
   );
 };

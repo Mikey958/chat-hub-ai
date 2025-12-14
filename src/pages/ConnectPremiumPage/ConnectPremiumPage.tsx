@@ -147,6 +147,7 @@ export const ConnectPremiumPage = () => {
       <div className={s.connectPremiumPage__footer}>
         <Link
           to={'https://www.tbank.ru/cf/8GB8wTqvqSj'}
+          target='_blank'
           className={s.connectPremiumPage__subscribe}
         >
           <img src={whiteCrown} alt='Белая корона' />

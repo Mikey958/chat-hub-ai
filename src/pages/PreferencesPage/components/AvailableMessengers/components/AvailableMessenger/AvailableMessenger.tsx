@@ -11,6 +11,10 @@ interface AvailableMessengerProps {
 }
 
 export const AvailableMessenger = ({ item }: AvailableMessengerProps) => {
+  const handleConnect = () => {
+    console.log(`Connecting to ${item.name}`);
+  };
+
   return (
     <article className={s.availableMessenger}>
       <div className={s.availableMessenger__avatarWrapper}>
@@ -20,7 +24,9 @@ export const AvailableMessenger = ({ item }: AvailableMessengerProps) => {
         <p className={s.availableMessenger__title}>{item.name}</p>
         <p className={s.availableMessenger__status}>Не подключен</p>
       </div>
-      <button className={s.availableMessenger__connect}>Подключить</button>
+      <button onClick={handleConnect} className={s.availableMessenger__connect}>
+        Подключить
+      </button>
     </article>
   );
 };
