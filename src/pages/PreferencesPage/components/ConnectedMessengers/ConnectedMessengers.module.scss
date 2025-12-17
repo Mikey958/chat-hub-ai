@@ -15,4 +15,13 @@
     color: #000;
     letter-spacing: 0;
   }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
 }

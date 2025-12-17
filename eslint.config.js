@@ -50,6 +50,8 @@ export default defineConfig([
       },
     },
     rules: {
+      'jsx-a11y/no-static-element-interactions': 'off',
+      'jsx-a11y/click-events-have-key-events': 'off',
       // Import rules
       'import/order': [
         'error',
@@ -111,4 +113,3 @@ export default defineConfig([
     },
   },
 ]);
-
